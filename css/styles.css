@@ -1,3 +1,4 @@
+
 :root {
   --body-text: #434455;
   --background-color: #ffffff;
@@ -158,7 +159,7 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.menu-item-about {
+.advantages-item {
   max-width: 264px;
   gap: 24px;
   width: calc((100% - 72px) / 4);
@@ -255,19 +256,18 @@ a {
   gap: 24px;
   list-style: none;
 }
-.advantages-items {
-}
+
 
 .advantages-icon {
   margin: 24px 100px;
 }
 
-.about-sections {
+.advantages-sections {
   padding: 120px 0 120px;
   display: flex;
   gap: 24;
 }
-.about-menu {
+.advantages-menu {
   gap: 24px;
 }
 .second-section {
@@ -279,6 +279,14 @@ a {
 .skills-item {
   width: calc((100% - 48px) / 3);
   gap: 24px;
+}
+.suptitle-advantage {
+  max-width: 265px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--body-text);
+  margin-bottom: 8px;
 }
 /* ================ Team =============== */
 
@@ -320,9 +328,7 @@ a {
   margin-bottom: 8px;
   display: inline-block;
 }
-.suptitle-about {
-  max-width: 265px;
-}
+
 .suptitle {
   font-size: 16px;
   line-height: 1.5;
@@ -788,3 +794,4 @@ transition:  background-color var(--time-animation);
 .modal-form-button:focus{
   background-color: var(--selection-color);
 }
+
