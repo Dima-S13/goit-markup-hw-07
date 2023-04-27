@@ -50,6 +50,7 @@ a {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -64,17 +65,19 @@ a {
   }
 }
 /* ================== Header ==================== */
-.head-container {
+.menu-open-icon{
+  fill: #4d5ae5;
+}
+/* .head-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between;}
+  
 .header-menu {
   display: flex;
   align-items: center;
-  gap: 40px;
-  
-}
+  gap: 40px;}
+
 .site-head {
   border-bottom: 1px solid #e7e9fc;
   display: flex;
@@ -124,9 +127,9 @@ a {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--selection-color);
-}
+} */
 
-.active::after {
+/* .active::after {
   content: "";
   background-color: var(--selection-color);
   left: 0;
@@ -143,7 +146,7 @@ a {
   display: flex;
   gap: 40px;
   margin-left: auto;
-}
+} */
 
 
 
@@ -278,10 +281,13 @@ font-size: 36px;
 line-height: 1.12;
 letter-spacing: 0.02em;
 color: var(--second-background-color);
+margin-bottom: 8px; 
+text-align: center;}
 
-margin-bottom: 8px;
- }
-  
+@media screen and (min-width: 768px) {
+.advantages-title {text-align: start;}
+}
+
 @media screen and (min-width: 1158px){
 .advantages-title {
   font-weight: 500;
@@ -300,22 +306,32 @@ margin-bottom: 8px;
 .advantages-menu {
  display: flex;
   flex-direction: row;
-  row-gap: 24px;
+  row-gap: 72px;
   flex-wrap: wrap;
-   gap: 24px;
+  gap: 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--body-text);
-}
-.advantages-item {
-  max-width: 264px;
+  color: var(--body-text);}
 
+ @media screen and (min-width: 1158px){
+  .advantages-menu {
+    flex-wrap: nowrap;
+  }
+ }
+
+.advantages-item {
+max-width: 396px;
+margin-bottom: 72px;
 }
 
 @media screen and (min-width: 768px) {
   .advantages-item { width: calc((100% - 24px) / 2);
+  max-width: 356px;}
+
+ .suptitle-advantage{
+  max-width: 356px;
  }
 }
 
@@ -327,6 +343,15 @@ margin-bottom: 8px;
   flex-wrap: wrap;
   gap: 24;} }
 
+.suptitle-advantage {
+  max-width: 396px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--body-text);
+  margin-bottom: 8px;}
+
+  /* ---------------- Second Section ---------------- */
 .second-section {  padding-bottom: 120px;}
 
 @media only screen and (max-width: 1157px) {
@@ -339,14 +364,7 @@ margin-bottom: 8px;
   width: calc((100% - 48px) / 3);
   gap: 24px;
 }
-.suptitle-advantage {
-  max-width: 265px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--body-text);
-  margin-bottom: 8px;
-}
+
 /* ================ Team =============== */
 .team-list {
   padding: 96px 0 96px;
