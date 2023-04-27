@@ -65,30 +65,32 @@ a {
   }
 }
 /* ================== Header ==================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 .header-menu{display: none;}
 .address{display: none;}
-}
 
+.button-burger
+{color: var(--second-background-color);
+padding: 24px 0;}
 
-.head-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-padding: 24px 16px;}
-
-.button-burger{
-color: var(--second-background-color);}
-
-.mobile-menu{
-  position: fixed;
+.mobile-menu
+{ position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   background-color: var(--background-color);
-}
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 400ms linear, visibility 400ms linear; }
+
+.mobile-menu.is-open
+{opacity: 1;
+  visibility: visible;
+pointer-events: auto;}
+
 .mobile-menu-list{
   padding: 80px 40px;
 }
@@ -105,13 +107,15 @@ color: var(--second-background-color);}
 .mobile-address
 {padding-right: 35px;
 padding-left: 40px;
-margin-bottom: 56px;}
+margin-top: 86px;
+}
 
 .mobile-contacts-item
 {margin-bottom: 48px;}
 
 .mobile-phone
-{font-weight: 700;
+{font-style: normal;
+  font-weight: 700;
 font-size: 36px;
 line-height: 1.11;
 letter-spacing: 0.02em;
@@ -119,7 +123,8 @@ color: var(--button-list-color);
 max-width: 353px;}
 
 .mobile-email
-{font-weight: 500;
+{font-style: normal;
+ font-weight: 500;
 font-size: 20px;
 line-height: 1.2;
 color: var(--body-text);}
@@ -127,7 +132,8 @@ color: var(--body-text);}
 .mobile-social-list
 { display: flex;
   justify-content: center;
-  gap: 56px;}
+  gap: 56px;
+max-width: 328px;}
 
 .mobile-social-link
 {display: flex;
@@ -140,37 +146,44 @@ color: var(--body-text);}
   background-color: var(--button-list-color);
   transition: background-color var(--time-animation);}
 
-.mobile-menu.is-open
-{position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-pointer-events: none;}
+.mobile-menu-link:hover,
+.mobile-menu-link:focus
+{color: var(--selection-color);}
 
 .mobile-social-link:hover,
 .mobile-social-link:focus
 {background-color: var(--selection-color);}
 .mobile-head-icon
-{fill: var(--button-list-background);}
+{fill: var(--button-list-background);}}
 
-/* .header-menu {
+@media screen and (min-width: 768px) 
+{.mobile-menu {display: none;}
+.button-burger {display: none;}
+
+/* .head-container {
   display: flex;
   align-items: center;
-  gap: 40px;} */
+  justify-content: space-between;
+padding: 24px 16px;} */
 
-/* .site-head {
-  border-bottom: 1px solid #e7e9fc;
+/* .header-menu 
+{ display: flex;
+  align-items: center;
+  gap: 40px;}
+
+  .site-nav 
+  {  display: flex;
+    align-items: center;}
+
+.site-head
+ { border-bottom: 1px solid #e7e9fc;
   display: flex;
   gap: 40px;
   align-items: center;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-} */
-/* .site-nav {
-  align-items: center;
-  display: flex;
-} */
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);} */
+  }
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -194,8 +207,8 @@ pointer-events: none;}
   color: var(--second-background-color);
   text-transform: uppercase;}
 
-/* .menu-link {
-  display: block;
+/* .menu-link 
+{ display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -203,14 +216,12 @@ pointer-events: none;}
   color: var(--second-background-color);
   padding: 24px 0 24px;
   position: relative;
-  transition: color var(--time-animation);
-}
+  transition: color var(--time-animation);}
 .menu-link:hover,
-.menu-link:focus {
-  color: var(--selection-color);
-} */
+.menu-link:focus 
+{ color: var(--selection-color);} */
 
-/* .active::after {
+.active::after {
   content: "";
   background-color: var(--selection-color);
   left: 0;
@@ -222,15 +233,27 @@ pointer-events: none;}
   height: 4px;
 }
 
-.address-menu {
-  font-style: normal;
+/* .address-menu 
+{ font-style: normal;
   display: flex;
   gap: 40px;
-  margin-left: auto;
+  margin-left: auto;} */
+/* =============== Contact information ============== */
+/* .email-phone {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--body-text);
+  transition: color var(--time-animation);
+}
+.email-phone:hover,
+.email-phone:focus {
+  color: var(--selection-color);
 } */
 
-
-
+/* --------- END of HEADER --------- */
 .menu-title {
   margin-bottom: 8px;
   display: flex;
@@ -252,22 +275,7 @@ pointer-events: none;}
   text-align: center;
 }
 
-/* =============== Contact information ============== */
-.email-phone {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--body-text);
-  transition: color var(--time-animation);
-}
-.email-phone:hover,
-.email-phone:focus {
-  color: var(--selection-color);
-}
-
-/* ========================= Main page ========================= */
+/* =============== Main page =============== */
 .hero {
   padding: 54px 0 54px;
   max-width: 428px;
@@ -987,10 +995,10 @@ transition:  background-color var(--time-animation);
 .modal-form-button:focus{
   background-color: var(--selection-color);}
   
-.close-btn-menu{
+.close-mobile-btn-menu {
    position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 48px;
+  right: 36px;
   color: var(--second-background-color);
   width: 24px;
   height: 24px;
@@ -1003,11 +1011,13 @@ transition:  background-color var(--time-animation);
   transition: background-color var(--time-animation), 
   fill var(--time-animation);
 }
-.close-btn-menu:hover,
-.close-btn-menu:focus {
+.close-mobile-btn-menu:hover,
+.close-mobile-btn-menu:focus {
   background-color: var(--selection-color);
 }
-.close-btn-menu:hover .close-btn-menu-icon,
-.close-btn-menu:focus .close-btn-menu-icon {
-  fill: var(--background-color);
-}
+.close-mobile-btn-menu:hover .close-btn-menu-icon,
+.close-mobile-btn-menu:focus .close-btn-menu-icon {
+  fill: var(--background-color);}
+
+  /*  ====== Mobile close button =====*/
+  
