@@ -39,9 +39,25 @@
             </li>
           </ul>
         </nav>
-        <button class="menu-open" type="button">
-          <svg class="menu-open-icon">
-            <use href="./images/icons.svg#icon-hamburger"></use>
+        <button class="button_menu-open" type="button">
+          <!-- <svg class="button_menu-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg> -->
+          <svg
+            class="button_menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="22"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M2.75 12.25h10.5m-10.5-4h10.5m-10.5-4h10.5"
+            />
           </svg>
         </button>
         <!-- =============== Contact$ =============== -->
@@ -616,6 +632,26 @@
         </form>
       </div>
     </div> -->
+
+    <!-- =========== MOBILE MENU ============ -->
+    <div class="mobile-menu">
+      <button class="close-btn-modal" type="button" data-modal-close="">
+        <svg class="close-btn-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <ul>
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+    </div>
     <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
