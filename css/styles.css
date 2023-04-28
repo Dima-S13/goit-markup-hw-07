@@ -540,10 +540,10 @@ margin-bottom: 72px;
 }
 
 /* ---------- Customers ------------ */
-.customers {  padding: 115px 0 115px;}
+.customers {  padding: 96px 110px;}
 
 @media screen and (min-width: 768px) {
- .customers  {padding: 292px 0 292px}}
+ .customers  {padding: 96px 0 96px}}
 
 @media screen and (min-width: 1158px) {
 .customers {padding: 120px 0 120px;}  }
@@ -609,14 +609,14 @@ flex-wrap: nowrap;}  }
 .footer {
   background: var(--second-background-color);
   padding: 100px 0 100px;
-  display: flex;
+  
 }
 .footer-suptitle {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--button-list-background);
-  max-width: 264px;
+  max-width: 268px;
 }
 .logo-foot {
   font-family: "Raleway", sans-serif;
@@ -638,25 +638,31 @@ flex-wrap: nowrap;}  }
   margin-bottom: 16px;
 }
 .footer {
-  display: flex;}
-
-  @media screen and (max-width: 727px) 
-{ .footer-contain 
-{ align-items: baseline;
   display: flex;
-  flex-direction: column;
-  text-align: center;
-  row-gap: 72px;}
- 
+padding-top: 96px;
+padding-bottom: 96px;
+  }
+
+.footer-contain 
+{ align-items: center;
+  display: flex;
+ flex-wrap: wrap;
+  gap: 72px 24px;
+}
+
+.subscribe-footer
+{width: 264px;
+height: 70px;}
 
 .subscribe-form
   {display: flex;
-  flex-direction: column;
+      flex-direction: column;
   justify-content: center;
-row-gap: 16px;}}
+row-gap: 16px;}
 
-@media screen and (min-width: 768px) 
-{
+@media screen and (min-width: 768px) {
+.subscribe-form
+{display: flex;}
   
 }
 
@@ -664,6 +670,7 @@ row-gap: 16px;}}
 {.footer-contain { display: flex;
   flex-direction: row;
   text-align: center;
+  flex-wrap: nowrap;
 }
 }
 .first-footer 
@@ -681,7 +688,7 @@ row-gap: 16px;}}
   margin-bottom: 16px;
 }
 .footer-list
- {  display: flex;
+ {display: flex;
   justify-content: center;
   gap: 16px;
   list-style: none;}
@@ -734,7 +741,7 @@ row-gap: 16px;}}
 
 }
 .subscribe-input{
-width: 264px;
+width: 100%;
 height: 40px;
 border-radius: 4px;
 outline: none;
@@ -755,7 +762,7 @@ color: var(--background-color);
   align-items: center;
   color: var(--background-color);
   background-color: var(--button-list-color);
-  width: 165px;
+  width: 100%;
   height: 40px;
   border-radius: 4px;
   transition:  background-color var(--time-animation);
