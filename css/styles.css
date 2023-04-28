@@ -137,7 +137,7 @@ justify-content: flex-end;}
   visibility: hidden;
   pointer-events: none;
   transition: opacity var(--time-animation), visibility var(--time-animation);
-display: flex;
+  display: flex;
 flex-direction: column;
 overflow: auto; }
 
@@ -148,9 +148,10 @@ pointer-events: auto;}
 
 .mobile-menu-list{
   padding: 80px 40px;
+  margin-bottom: auto;
 }
 .mobile-nav-item{
-margin-bottom: 40px;}
+margin-bottom: 20px;}
 
 .mobile-menu-link{
 font-weight: 700;
@@ -162,10 +163,11 @@ color: var(--second-background-color);}
 .mobile-address
 {padding-right: 35px;
 padding-left: 40px;
+padding-bottom: 40px;
 }
 
 .mobile-contacts-item
-{margin-bottom: 48px;}
+{margin-bottom: 28px;}
 
 .mobile-phone
 {font-style: normal;
@@ -398,6 +400,7 @@ text-align: center;}
 
 .advantages-sections {
   padding: 96px 16px;
+  align-items: center;
   }
 
 .advantages-menu {
@@ -677,12 +680,13 @@ row-gap: 16px;}}
   color: var(--background-color);
   margin-bottom: 16px;
 }
-.footer-list {
-  display: flex;
+.footer-list
+ {  display: flex;
   justify-content: center;
   gap: 16px;
-  list-style: none;
-}
+  list-style: none;}
+
+
 .footer-links {
   display: flex;
   text-decoration: none;
@@ -1026,9 +1030,9 @@ transition:  background-color var(--time-animation);
   background-color: var(--selection-color);}
   
 .close-mobile-btn-menu {
-   position: absolute;
+  position: absolute;
   top: 24px;
-  right: 26px;
+  right: 32px;
   color: var(--second-background-color);
   width: 24px;
   height: 24px;
