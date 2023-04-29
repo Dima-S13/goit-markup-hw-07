@@ -65,7 +65,7 @@ a {
   }
 }
 /* ================== Header ==================== */
-@media screen and (min-width: 1158px) {
+@media only screen and (min-width: 1158px) {
   .address-menu 
   {display: flex;
   margin-left: auto;}
@@ -101,7 +101,7 @@ a {
 { font-style: normal;
   gap: 40px;
   margin-left: auto;
-justify-content: flex-end;}
+}
 
 .email-phone {
   font-style: normal;
@@ -361,8 +361,7 @@ padding-bottom: 112px;
 @media screen and (min-width: 1158px){
   .hero {
   max-width: 1440px;
-  padding-top: 168px;
-  padding-bottom: 168px;
+  padding: 188px 0 188px;
 align-items: center}
 }
 .hero-title {
@@ -381,14 +380,15 @@ align-items: center}
   max-width: 768px;
   font-size: 56px;
   line-height: 1.07;
-  margin-bottom: 36px;
-  }
-}
+  margin-bottom: 36px; }}
+
 @media only screen and (min-width: 1158px){
   .hero-title{ 
   font-size: 56px;
   line-height: 1.07;
-  margin-bottom: 48px;  }
+  margin-bottom: 48px; 
+  align-items: center;
+  justify-content: center; }
 }
 .hiden-title {
   margin-bottom: 8px;
@@ -661,11 +661,21 @@ flex-wrap: nowrap;}  }
   display: inline-block;
 }
 /* =================== Footer ================== */
-.footer {
-  background: var(--second-background-color);
-  padding: 100px 0 100px;
+.footer 
+{ display: flex;
+padding-top: 96px;
+padding-bottom: 96px;
+align-items: center;
+justify-content: center;
+ background: var(--second-background-color);
+  padding: 100px 0 100px;  }
   
-}
+.footer-contain 
+{ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+  gap: 72px 24px;}
+
 .footer-suptitle {
   font-size: 16px;
   line-height: 1.5;
@@ -692,19 +702,8 @@ flex-wrap: nowrap;}  }
   display: inline-block;
   margin-bottom: 16px;
 }
-.footer {
-  display: flex;
-padding-top: 96px;
-padding-bottom: 96px;
-justify-content: center;
-  }
 
-.footer-contain 
-{ align-items: center;
-  display: flex;
- flex-wrap: wrap;
-  gap: 72px 24px;
-}
+
 
 .subscribe-footer
 {max-width: 398px;
@@ -726,9 +725,9 @@ flex-direction: row;}
 @media screen and (min-width: 1158px) 
 {.footer-contain { display: flex;
   flex-direction: row;
-  text-align: center;
-  flex-wrap: nowrap;}
-}
+ 
+  flex-wrap: nowrap;}}
+
 .first-footer 
 {margin-right: 120px;}
 
