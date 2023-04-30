@@ -856,6 +856,18 @@ padding-bottom: 96px;}}
  .portfolio-section {padding-top: 100px;
 padding-bottom: 120px;}
 }
+.list-container 
+{ flex-wrap: wrap;
+display: flex;
+  row-gap: 48px;
+  width: 100%;
+  column-gap: 24px;}
+
+@media only screen and (max-width: 767px)
+{.list-container{display: flex;
+  flex-direction: column;
+justify-content: center;}
+.cards-link {width: 396px;}}
 
 .list-container 
 { flex-wrap: wrap;
