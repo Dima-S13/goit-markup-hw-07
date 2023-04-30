@@ -76,10 +76,10 @@
     <!-- ================= Main ==================== -->
     <main>
       <section class="portfolio-section">
-        <!-- ===================== Five's buttons =================== -->
-        <div class="container">
+        <!-- ========= Five's buttons ========== -->
+        <div class="container port-cont">
           <h1 class="hidden-title" hidden>Buttons and Rows</h1>
-          <ul class="list menu-buttons">
+          <ul class="menu-button">
             <li class="buttons-item">
               <button class="list-button" type="button">All</button>
             </li>
@@ -97,7 +97,7 @@
             </li>
           </ul>
           <!-- =============== Row  ================= -->
-          <ul class="cards-menu list-container">
+          <ul class="list-container">
             <li class="list-item">
               <a class="link cards-link" href="">
                 <div class="wraper">
@@ -373,5 +373,69 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu js-menu-container">
+      <button class="close-mobile-btn-menu js-close-menu" type="button">
+        <svg class="close-btn-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="./index.html">Studio</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-nav-item">
+          <a class="mobile-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+      <address class="mobile-address">
+        <ul class="mobile-address-menu">
+          <li class="mobile-contacts-item">
+            <a class="mobile-phone" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mobile-contacts-item">
+            <a class="mobile-email" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social-list">
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href=""
+              ><svg class="mobile-head-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href=""
+              ><svg class="mobile-head-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href=""
+              ><svg class="mobile-head-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-item">
+            <a class="mobile-social-link" href=""
+              ><svg class="mobile-head-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
