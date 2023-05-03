@@ -399,10 +399,10 @@ a {
 
 
 /* ---------- Customers ------------ */
-.customers { padding: 115px 0 115px;}
+.customers { padding: 96px 0 96px;}
 
 @media screen and (min-width: 768px) {
- .customers  {padding: 292px 0 292px}}
+ .customers  {padding: 100px 0 100px}}
 
 @media screen and (min-width: 1158px) {
 .customers {padding: 120px 0 120px;}  }
@@ -411,15 +411,19 @@ a {
 .customers-list
  {display: flex;
 flex-wrap: wrap;
-
+max-width: 396px;
  column-gap: 16px;
-row-gap: 72px;}
+row-gap: 72px;
+margin: 0 auto;
+}
 
   .customers-item
- { width: calc((100% - 16px) / 2);
+ { width: calc((100% - 48px) / 2);
   height: 88px;
-
 }
+@media screen and (min-width: 768px) 
+{.customers-list
+{max-width: 552px;}}
 
 .customers-title
  {  font-size: 36px;
