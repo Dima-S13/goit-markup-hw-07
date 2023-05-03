@@ -322,6 +322,9 @@ line-height: 1.11px;
   font-size: 20px;
   line-height: 1.2;}}
 
+.suptitle-advantages {
+  max-width: 396px;
+}
 .advantages-icon {
   margin: 24px 100px;
 }
@@ -373,9 +376,7 @@ line-height: 1.11px;
 
 
 
-.suptitle-about {
-  max-width: 265px;
-}
+
 .suptitle {
   font-size: 16px;
   line-height: 1.5;
