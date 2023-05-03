@@ -336,7 +336,8 @@ a {
   gap: 24;}
 
  @media only screen and (min-width: 1158px) {
-  .advantages-sections  { padding: 120px 0 120px;}} 
+  .advantages-sections  { padding: 120px 0 120px;
+  }} 
 .advantages-contain {
   display: flex;
   align-items: center;
@@ -411,12 +412,13 @@ line-height: 1.11px;
 
 
 .second-section 
-{ padding-bottom: 120px;}
+{ padding-bottom: 120px;
+}
 
 @media only screen and (max-width: 1157px) {
   .second-section { display: none;  }}
 
- .skills-menu {
+ .skills-menu { display: flex;
   gap: 24px;
 }
 .skills-item {
