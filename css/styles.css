@@ -277,20 +277,20 @@ a {
 }
 @media only screen and (max-width: 1157px) {
  .advantages-contain   {display: none;}
+ 
 }
 .advantages-menu {
  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-gap: 72px;
 min-width: 396px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text);
-  margin-right: auto;
-  gap: 24px;}
+  text-align: center;
+  gap: 72px 24px;}
 
   .advantages-item 
   {max-width: 264px;
@@ -300,31 +300,38 @@ min-width: 396px;
   @media screen and (min-width: 768px) {
     .advantages-item { width: calc((100% - 24px) / 2);
  }}
-  
+   @media screen and (min-width: 1158px)
+   {.advantages-menu {
+    flex-wrap: nowrap; }}
+    
 .advantages-list {
   display: flex;
   justify-content: center;
   gap: 24px;
-  list-style: none;
 }
 .advantage-title 
 {font-weight: 700;
 font-size: 36px;
 line-height: 1.11px;
   letter-spacing: 0.02em;
-  color: var(--second-background-color);
   text-align: center;
-  margin-bottom: 8px;
+  color: var(--second-background-color);
+    margin-bottom: 8px;
   display: inline-block;}
 
- @media only screen and (min-width: 1158px) {
- .advantage-title {font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;}}
+  .suptitle-advantages 
+  {  width: 396px;}
 
-.suptitle-advantages {
-  max-width: 396px;
-}
+ @media only screen and (min-width: 1158px) {
+ .advantage-title {
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;}
+.suptitle-advantages
+{width: 264px;}}
+
+
 .advantages-icon {
   margin: 24px 100px;
 }
@@ -375,14 +382,13 @@ line-height: 1.11px;
 }
 
 
-
-
 .suptitle {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text);
   margin-bottom: 8px;
+  
 }
 
 /* ------------ TEAM ------------ */
