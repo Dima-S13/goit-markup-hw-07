@@ -434,7 +434,8 @@ margin: 0 auto;
   justify-content: center;}
 
  @media screen and (min-width: 1158px) {
-.customers-list {
+.customers-list
+ {max-width: 1128px;
     gap: 24px;
   display: flex;
 flex-wrap: nowrap;} }
