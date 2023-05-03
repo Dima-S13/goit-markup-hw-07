@@ -50,6 +50,23 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
 /* ================== Header ==================== */
 .head-container {
   display: flex;
@@ -140,14 +157,16 @@ a {
   display: flex;
   margin-right: auto;
 }
-.team-menu {
-  display: flex;
-  gap: 24px;
-}
 
 .menu-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  color: var(--second-background-color);
+  text-align: center;
   margin-bottom: 8px;
-  display: flex;
+  display: inline-block;
 }
 
 .menu-item {
@@ -270,10 +289,13 @@ a {
 .about-menu {
   gap: 24px;
 }
-.second-section {
-  padding-bottom: 120px;
-}
-.skills-menu {
+.second-section 
+{ padding-bottom: 120px;}
+
+@media only screen and (max-width: 1157px) {
+  .second-section { display: none;  }}
+
+ .skills-menu {
   gap: 24px;
 }
 .skills-item {
@@ -281,10 +303,6 @@ a {
   gap: 24px;
 }
 
-@media only screen and (max-width: 1157px) {
- .second-section   {display: none;}
-}
-/* ================ Team =============== */
 
 /* ================= Advantages ================ */
 .social-list {
@@ -335,41 +353,92 @@ a {
   margin-bottom: 8px;
 }
 
-.title {
-  font-weight: 700;
+/* ------------ TEAM ------------ */
+
+.team-section
+{ background-color: var(--button-list-background);
+  padding: 96px 0 96px;}
+
+  @media only screen and (min-width: 1158px)
+  {.team-section {padding: 120px 0 120px;}  }
+
+.title
+{ font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--second-background-color);
   margin-bottom: 72px;
-  text-align: center;
-}
-.team-list {
-  background-color: var(--button-list-background);
-  padding: 120px 0 120px;
-}
-.customers {
-  padding: 120px 0 120px;
+  text-align: center;}
+
+  .team-menu {
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--body-text);
+  margin: 0 auto;}
+
+  @media screen and (min-width: 768px) {
+   .team-menu { 
+  flex-direction: row;
+  row-gap: 64px;
+    flex-wrap: wrap;
+    justify-content: center;
+     gap: 24;} }
+
+@media screen and (min-width: 1158px) {
+   .team-menu{ display: flex;
+    flex-wrap: nowrap;
+  gap: 24;}}
+
+
+/* ---------- Customers ------------ */
+.customers { padding: 115px 0 115px;}
+
+@media screen and (min-width: 768px) {
+ .customers  {padding: 292px 0 292px}}
+
+@media screen and (min-width: 1158px) {
+.customers {padding: 120px 0 120px;}  }
+
+
+.customers-list
+ {display: flex;
+flex-wrap: wrap;
+
+ column-gap: 16px;
+row-gap: 72px;}
+
+  .customers-item
+ { width: calc((100% - 16px) / 2);
+  height: 88px;
+
 }
 
-.customers-title {
-  font-size: 36px;
+.customers-title
+ {  font-size: 36px;
   line-height: 1.1;
   margin-bottom: 72px;
   color: var(--second-background-color);
   text-align: center;
-  justify-content: center;
-}
+  justify-content: center;}
 
+ @media screen and (min-width: 1158px) {
 .customers-list {
-  gap: 24px;
+    gap: 24px;
   display: flex;
-}
-.customers-item {
-  width: calc((100% - 120px) / 6);
-  height: 88px;
-}
+flex-wrap: nowrap;} }
+
+ @media screen and (min-width: 768px) {
+   .customers-item{
+  width: calc((100% - 72px) / 3);}}
+
 .customers-links {
   color: var(--customers-icon-color);
   width: 100%;
@@ -379,13 +448,13 @@ a {
   justify-content: center;
   align-items: center;
   display: flex;
-  transition: border-color var(--time-animation), color var(--time-animation);
-}
+  transition: border-color var(--time-animation), color var(--time-animation);}
+
 .customers-links:hover,
 .customers-links:focus {
   border-color: #404bbf;
-  color: #404bbf;
-}
+  color: #404bbf;}
+
 .customers-icon {
   fill: currentColor;
 }
