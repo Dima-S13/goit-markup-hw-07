@@ -39,34 +39,31 @@ button {
   border: none;
   background-color: transparent;
 }
-a {
-  text-decoration: none;
-}
+a { text-decoration: none;}
 
+/* ========= CONTAINER ========== */
 .container {
-  width: 1158px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-@media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-@media only screen and (min-width: 1158px) {
-  .container {
-    max-width: 1158px;
-    padding: 0 15px;
-  }
-}
+@media screen and (min-width: 482px)
+   { .container{max-width: 482px;}  }
+
+@media screen and (min-width: 768px) 
+   { .container{max-width: 768px;}  }
+
+@media screen and (min-width: 1158px) 
+   { .container{max-width: 1158px;}   }
+
+   /* ========= CONTAINER ========== */
+
 @media only screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
     padding-bottom: 120px;
-  }
-}
+  }}
 /* ================== Header ==================== */
 .head-container {
   display: flex;
@@ -147,16 +144,6 @@ a {
   gap: 40px;
   margin-left: auto;
 }
-/* .menu {
-  list-style: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--body-text);
-  display: flex;
-  margin-right: auto;
-} */
 
 .menu-title {
   font-weight: 500;
@@ -177,11 +164,7 @@ a {
   border-radius: 0px 0px 4px 4px;
 }
 
-.menu-item-advantages {
-  max-width: 264px;
-  gap: 24px;
-  width: calc((100% - 72px) / 4);
-}
+
 
 .guys-name {
   padding: 32px 0;
@@ -213,13 +196,14 @@ a {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/bg_mob@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
 }
-@media (min-device-pixel-ratio: 2) and (max-width: 767px),
+
+/* @media (min-device-pixel-ratio: 2) and (max-width: 767px),
   (min-resolution: 192dpi) and (max-width: 767px),
   (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
@@ -287,10 +271,8 @@ a {
         url(../images/office_desktop@2x.jpg);
       background-repeat: no-repeat;
       background-position: center;
-      background-size: cover;
-    }
-  }
-}
+      background-size: cover; } }} */
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -330,14 +312,13 @@ a {
   background-color: var(--selection-color);
 }
 /* ============== Advantages ============== */
-.advantages-sections {
-  padding: 96px 0 96px;
-  display: flex;
-  gap: 24;}
+.advantages-sections
+ {padding: 96px 0; }
+
 
  @media only screen and (min-width: 1158px) {
-  .advantages-sections  { padding: 120px 0 120px;
-  }} 
+ .advantages-sections  { padding: 120px 0 120px; }} 
+
 .advantages-contain {
   display: flex;
   align-items: center;
@@ -355,61 +336,58 @@ a {
 .advantages-menu {
  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-min-width: 396px;
+ flex-wrap: wrap;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--body-text);
-  text-align: center;
   gap: 72px 24px;}
 
-  .advantages-item 
-  {max-width: 264px;
+.menu-item-advantages {
+  max-width: 264px;
   gap: 24px;
-  width: calc((100% - 24px) / 1);}
+  width: calc((100% - 72px) / 2);
+}
 
   @media screen and (min-width: 768px) {
-    .advantages-item { width: calc((100% - 24px) / 2);
- }}
+    .advantages-item { width: calc((100% - 24px) / 4); }}
+
    @media screen and (min-width: 1158px)
    {.advantages-menu {
     flex-wrap: nowrap; }}
     
-.advantages-list {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
+
 .advantage-title 
 {font-weight: 700;
 font-size: 36px;
 line-height: 1.11px;
   letter-spacing: 0.02em;
-  text-align: center;
   color: var(--second-background-color);
     margin-bottom: 8px;
+    text-align: center;
   display: inline-block;}
 
   .suptitle-advantages 
-  {  width: 396px;}
+  { min-width: 320px;
+    display: flex;
+  }
 
  @media only screen and (min-width: 1158px) {
  .advantage-title {
-
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;}
+
 .suptitle-advantages
-{width: 264px;}}
+{width: 294px;}}
 
 
 .advantages-icon {
   margin: 24px 100px;
 }
 
-
+/* ---------- What are we doing  ---------- */
 
 .second-section 
 { padding-bottom: 120px;
@@ -427,7 +405,6 @@ line-height: 1.11px;
 }
 
 
-/* ================= Advantages ================ */
 .social-list {
   display: flex;
   justify-content: center;
